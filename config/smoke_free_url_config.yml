@@ -1,0 +1,8 @@
+development:
+  url: "http://localhost:3000"
+
+test:
+  url: "http://sfp.me"
+
+production:
+  url: "http://www.smokefreeproject.org/"
