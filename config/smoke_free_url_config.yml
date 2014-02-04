@@ -1,5 +1,6 @@
+# need to change developement url
 development:
-  url: "http://localhost:3000"
+  url: "http://sfp.me"
 
 test:
   url: "http://sfp.me"
