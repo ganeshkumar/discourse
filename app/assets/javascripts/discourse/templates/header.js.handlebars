@@ -47,13 +47,11 @@
             {{#if currentUser.unread_private_messages}}
               <a href='#' class='badge-notification unread-private-messages'>{{currentUser.unread_private_messages}}</a>
             {{/if}}
-          {{else}}
-            <a class='icon' href="#" {{action showLogin}} title='{{i18n notifications.title}}'><i class='fa fa-comment'></i></a>
           {{/if}}
         </li>
         <li>
           {{#if Discourse.loginRequired}}
-            <a id='search-button' class='icon expand' href='#' {{action showLogin}}>
+            <a id='search-button' class='icon expand' href='#'>
               <i class='fa fa-search'></i>
             </a>
           {{else}}
@@ -69,8 +67,7 @@
         <li class='categories dropdown'>
           {{#if Discourse.loginRequired}}
             <a class='icon'
-               href="#"
-               {{action showLogin}}>
+               href="#">
                <i class='fa fa-bars'></i>
             </a>
           {{else}}
