@@ -12,7 +12,7 @@ class WelcomeController < ApplicationController
 
   def authorize_user_from_smoke_free
     url = "?client_id=#{APP_ID}&client_secret=#{APP_SECRET}&state='active'&auth_token=#{params[:auth_token]}"
-    response = HTTParty.get("#{SMOKE_FREE_URLS["url"]}/auth/smoke_free_strategy/access_token.json#{url}")
+    response = HTTParty.get("http://sfp.me/auth/smoke_free_strategy/access_token.json#{url}")
     parsed_response = JSON.parse(response.body)
     if parsed_response["user"].present?
       login_user(parsed_response["user"])
