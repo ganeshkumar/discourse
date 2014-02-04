@@ -34,8 +34,6 @@
         <div class='current-username'>
           {{#if currentUser}}
             <span class='username'><a {{bind-attr href="currentUser.path"}}>{{currentUser.displayName}}</a></span>
-          {{else}}
-            <button {{action showLogin}} class='btn btn-primary btn-small'>{{i18n log_in}}</button>
           {{/if}}
         </div>
       {{/unless}}
@@ -92,8 +90,6 @@
         <li class='current-user'>
           {{#if currentUser}}
             {{#titledLinkTo 'userActivity.index' currentUser titleKey="current_user" class="icon"}}{{boundAvatar currentUser imageSize="medium" }}{{/titledLinkTo}}
-          {{else}}
-            <div class="icon not-logged-in-avatar" {{action showLogin}}><i class='fa fa-user' title='{{i18n not_logged_in_user}}'></i></div>
           {{/if}}
         </li>
       </ul>

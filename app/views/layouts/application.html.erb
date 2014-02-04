@@ -43,15 +43,6 @@
     <section id='main'>
     </section>
 
-    <% unless current_user %>
-      <form id='hidden-login-form' method="post" action="<%=login_path%>" style="display: none;">
-        <input name="username" type="text"     id="signin_username">
-        <input name="password" type="password" id="signin_password">
-        <input name="redirect" type="hidden">
-        <input type="submit" id="signin-button" value="Log In">
-      </form>
-    <% end %>
-
     <%- if @preloaded.present? %>
       <script>
       <%- @preloaded.each do |key, json| %>
