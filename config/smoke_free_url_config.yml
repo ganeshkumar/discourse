@@ -1,9 +1,9 @@
 # need to change developement url
 development:
-  url: "http://sfp.me"
+  url: "http://95.85.57.155"
 
 test:
-  url: "http://sfp.me"
+  url: "http://95.85.57.155"
 
 production:
-  url: "http://www.smokefreeproject.org/"
+  url: "http://146.185.168.33"
