@@ -1,19 +1,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: discourse_dev
-  username: postgres
-  password: postgres
-  host: localhost
-  pool: 5
-
-
-demo_test:
-  adapter: postgresql
-  encoding: unicode
   database: discourse_development
   username: postgres
-  password: rfo2vitodiscourse
+  password: postgres
   host: localhost
   pool: 5
 
