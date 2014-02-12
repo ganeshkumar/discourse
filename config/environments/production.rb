@@ -32,22 +32,37 @@ Discourse::Application.configure do
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
 
-  if GlobalSetting.smtp_address
-    settings = {
-      address:              GlobalSetting.smtp_address,
-      port:                 GlobalSetting.smtp_port,
-      domain:               GlobalSetting.smtp_domain,
-      user_name:            GlobalSetting.smtp_user_name,
-      password:             GlobalSetting.smtp_password,
-      authentication:       GlobalSetting.smtp_authentication,
-      enable_starttls_auto: GlobalSetting.smtp_enable_start_tls
-    }
+  #if GlobalSetting.smtp_address
+  #  settings = {
+  #    address:              GlobalSetting.smtp_address,
+  #    port:                 GlobalSetting.smtp_port,
+  #    domain:               GlobalSetting.smtp_domain,
+  #    user_name:            GlobalSetting.smtp_user_name,
+  #    password:             GlobalSetting.smtp_password,
+  #    authentication:       GlobalSetting.smtp_authentication,
+  #    enable_starttls_auto: GlobalSetting.smtp_enable_start_tls
+  #  }
+  #
+  #  config.action_mailer.smtp_settings = settings.reject{|x,y| y.nil?}
+  #else
+  #  config.action_mailer.delivery_method = :sendmail
+  #  config.action_mailer.sendmail_settings = {arguments: '-i'}
+  #end
+  config.action_mailer.default_url_options = {:host => 'smokefreeproject.org',:locale =>I18n.locale}
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "smokefreeproject.org",
+    :user_name            => "info@smokefreeproject.org",
+    :password             => "cramp70(Cleo",
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
 
-    config.action_mailer.smtp_settings = settings.reject{|x,y| y.nil?}
-  else
-    config.action_mailer.delivery_method = :sendmail
-    config.action_mailer.sendmail_settings = {arguments: '-i'}
-  end
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify

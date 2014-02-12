@@ -115,7 +115,7 @@ class PostAction < ActiveRecord::Base
               subtype: subtype,
               title: title,
               raw: body
-       ).create.id
+       ).create.try(:id)
     end
   end
 

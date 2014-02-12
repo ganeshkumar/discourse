@@ -12,7 +12,7 @@ USERNAME_ROUTE_FORMAT = /[A-Za-z0-9\_]+/ unless defined? USERNAME_ROUTE_FORMAT
 Discourse::Application.routes.draw do
 
   match "/404", to: "exceptions#not_found", via: [:get, :post]
-  match "/:auth_token", to: "welcome#authorize_user_from_smoke_free", via: [:get]
+  match "/forum/:auth_token", to: "welcome#authorize_user_from_smoke_free", via: [:get]
 
   mount Sidekiq::Web => "/sidekiq", constraints: AdminConstraint.new
 
