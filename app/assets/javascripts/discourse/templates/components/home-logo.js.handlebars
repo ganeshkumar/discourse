@@ -6,11 +6,16 @@
       <i class="fa fa-home"></i>
     {{/if}}
   {{else}}
-    <span>
       <a href="http://smokefreeproject.org">
         <img id="site-logo" class="logo-big" src="{{unbound bigLogoUrl}}" alt="{{unbound title}}">
+        <span class="sfp-icon-text">SmokeFreeProject</span>
       </a>
-     </span>
-    <span><a href="http://smokefreeproject.org">SmokeFreeProject.org</a></span>
   {{/if}}
 </a>
+
+<style>
+  span.sfp-icon-text {
+  line-height: 22px;
+  font-size: 22px;
+  }
+</style>
