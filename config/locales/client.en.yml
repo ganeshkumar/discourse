@@ -101,7 +101,7 @@ en:
     look_back: "Look-Back"
     trophy: "Trophy"
     donations: "Donations and SFP-Plus"
-    about: "Help & About"
+    about: "About (Impressum)"
     info: "Info"
     donation: "Donation and plus-Status"
     privacy_policy: "Privacy Policy"
@@ -1100,7 +1100,7 @@ en:
       with_topics: "%{filter} Topics"
       with_category: "%{filter} %{category} Topics"
       latest:
-        title: "Latest"
+        title: "Latest Forum Post"
         help: "topics with recent posts"
       hot:
         title: "Hot"
