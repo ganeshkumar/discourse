@@ -225,8 +225,8 @@ email:
     default: 7
     enum: 'DigestEmailSiteSetting'
   email_custom_headers: 'Auto-Submitted: auto-generated'
-  reply_by_email_enabled: false
-  reply_by_email_address: ''
+  reply_by_email_enabled: true
+  reply_by_email_address: 'info@smokefreeproject.org'
   pop3s_polling_enabled: false
   pop3s_polling_host: ''
   pop3s_polling_port: 995
