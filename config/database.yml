@@ -13,5 +13,5 @@ profile:
   database: discourse_development
   username: postgres
   password: rfo2vitodiscourse
-  host: 95.85.57.155
+  host: 95.85.63.95
   pool: 25
