@@ -22,9 +22,6 @@ Discourse.TopicFooterButtonsView = Discourse.ContainerView.extend({
       if (!topic.get('isPrivateMessage')) {
 
         // We hide some controls from private messages
-        if (this.get('topic.details.can_invite_to')) {
-          this.attachViewClass(Discourse.InviteReplyButton);
-        }
         this.attachViewClass(Discourse.StarButton);
         this.attachViewClass(Discourse.ShareButton);
         this.attachViewClass(Discourse.ClearPinButton);
@@ -35,7 +32,6 @@ Discourse.TopicFooterButtonsView = Discourse.ContainerView.extend({
       this.trigger('additionalButtons', this);
     } else {
       // If not logged in give them a login control
-      this.attachViewClass(Discourse.LoginReplyButton);
     }
   }
 });
