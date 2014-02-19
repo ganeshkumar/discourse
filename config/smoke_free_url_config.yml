@@ -1,9 +1,0 @@
-# need to change developement url
-development:
-  url: "http://95.85.57.155"
-
-test:
-  url: "http://95.85.57.155"
-
-production:
-  url: "http://146.185.168.33"
