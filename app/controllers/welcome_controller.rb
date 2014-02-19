@@ -11,8 +11,9 @@ class WelcomeController < ApplicationController
   skip_before_filter :redirect_to_login_if_required
 
   def authorize_user_from_smoke_free
+    smoke_free_url =  getsmoke_free_url
     url = "?client_id=#{APP_ID}&client_secret=#{APP_SECRET}&state=active&auth_token=#{params[:auth_token]}"
-    response = HTTParty.get("#{SMOKE_FREE_URLS["url"]}/auth/smoke_free_strategy/access_token.json#{url}")
+    response = HTTParty.get("#{smoke_free_url}/auth/smoke_free_strategy/access_token.json#{url}")
     parsed_response = JSON.parse(response.body)
     if parsed_response["user"].present?
       login_user(parsed_response["user"])
@@ -45,5 +46,15 @@ class WelcomeController < ApplicationController
     :password,
     :username
   ).merge(ip_address: request.ip)
+  end
+
+  def getsmoke_free_url
+    if Rails.env == "profile"
+      PROFILE_SMOKE_FREE_URL
+    elsif Rails.env == "production"
+      PRODUCTION_SMOKE_FREE_URL
+    else
+      DEVELOPMENT_SMOKE_FREE_URL
+    end
   end
 end
