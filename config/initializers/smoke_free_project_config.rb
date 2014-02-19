@@ -1,6 +1,6 @@
-APP_ID =  'a57gewjdndfuerjfdfdn8u'
+DEVELOPMENT_SMOKE_FREE_URL = "http://localhost:3000"
 
-APP_SECRET  = "skhd73y7yrfjh98rejenfdiyhy7eu33j43jwd72j3e"
+PROFILE_SMOKE_FREE_URL = "http://95.85.57.155"
 
 
-SMOKE_FREE_URLS = YAML.load_file("#{Rails.root}/config/smoke_free_url_config.yml")[Rails.env]
+PRODUCTION_SMOKE_FREE_URL = "http://smokefreeproject.org"

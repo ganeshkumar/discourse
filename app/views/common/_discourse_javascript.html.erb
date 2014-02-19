@@ -40,4 +40,20 @@
   Discourse.set('assetVersion','<%= Discourse.assets_digest %>');
 </script>
 
+<% if Rails.env == "profile" %>
+  <script>
+    Discourse.sfp_url = '<%= PROFILE_SMOKE_FREE_URL %>';
+  </script>
+
+<% elsif Rails.env == "production" %>
+  <script>
+    Discourse.sfp_url = '<%= PRODUCTION_SMOKE_FREE_URL %>';
+  </script>
+
+<% else %>
+  <script>
+    Discourse.sfp_url = '<%= DEVELOPMENT_SMOKE_FREE_URL %>';
+  </script>
+
+<% end %>
 <%= javascript_include_tag 'browser-update.js' %>
