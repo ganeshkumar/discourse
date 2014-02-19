@@ -10,7 +10,7 @@ Discourse::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   if rails4?
     config.assets.js_compressor  = :uglifier
@@ -26,7 +26,7 @@ Discourse::Application.configure do
   config.assets.digest = true
 
   # Specifies the header that your server uses for sending files
-  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
+  #config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
@@ -71,17 +71,17 @@ Discourse::Application.configure do
   config.handlebars.precompile = true
 
   # allows admins to use mini profiler
-  config.enable_mini_profiler = GlobalSetting.enable_mini_profiler
+  #config.enable_mini_profiler = GlobalSetting.enable_mini_profiler
 
   # Discourse strongly recommend you use a CDN.
   # For origin pull cdns all you need to do is register an account and configure
-  config.action_controller.asset_host = GlobalSetting.cdn_url
+  #config.action_controller.asset_host = GlobalSetting.cdn_url
 
   # a comma delimited list of emails your devs have
   # developers have god like rights and may impersonate anyone in the system
   # normal admins may only impersonate other moderators (not admins)
-  if emails = GlobalSetting.developer_emails
-    config.developer_emails = emails.split(",")
-  end
+  #if emails = GlobalSetting.developer_emails
+  #  config.developer_emails = emails.split(",")
+  #end
 
 end
