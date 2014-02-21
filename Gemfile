@@ -109,7 +109,6 @@ gem 'multi_json'
 gem 'mustache'
 gem 'nokogiri'
 gem 'omniauth'
-gem 'omniauth-oauth2'
 gem "httparty", "~> 0.12.0"
 gem 'omniauth-openid'
 gem 'openid-redis-store'
