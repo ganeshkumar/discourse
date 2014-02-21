@@ -31,7 +31,14 @@
 
 <script>
   Discourse.CDN = '<%= Rails.configuration.action_controller.asset_host %>';
-  Discourse.BaseUrl = '<%= RailsMultisite::ConnectionManagement.current_hostname %>';
+  Discourse.BaseUrl = '<%= if Rails.env  == "profile"
+                              PROFILE_ENV_BASE_URL
+                           elsif Rails.env  == "production"
+                              PRODUCTION_ENV_BASE_URL
+                           else
+                              DEVELOPMENT_ENV_BASE_URL
+                           end
+                            %>';
   Discourse.BaseUri = '<%= Discourse::base_uri "/" %>';
   Discourse.Environment = '<%= Rails.env %>';
   Discourse.SiteSettings = PreloadStore.get('siteSettings');
