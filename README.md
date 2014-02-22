@@ -67,8 +67,8 @@ SideKiq
 ----------
 For sending emails and running background jobs
 
-To start in test server [env: profile] : nohup bundle exec sidekiq -e profile -L log/sidekiq.log 2>&1 &
+To start in test server [env: profile] : bundle exec sidekiq -d -L sidekiq.log -e profile
 
-To start in production server [env: profile] : nohup bundle exec sidekiq -e production -L log/sidekiq.log 2>&1 &
+To start in production server [env: production] : bundle exec sidekiq -d -L sidekiq.log -e production
 
 TODO: Still need to add some more info
