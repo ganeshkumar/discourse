@@ -6,9 +6,6 @@
       <label class="control-label">{{i18n user.username.title}}</label>
       <div class="controls">
         <span class='static'>{{username}}</span>
-        {{#if can_edit_username}}
-          {{#link-to "preferences.username" class="btn pad-left"}}<i class="fa fa-pencil"></i>{{/link-to}}
-        {{/if}}
       </div>
       <div class='instructions'>
         {{{i18n user.username.short_instructions username="username"}}}
@@ -19,7 +16,7 @@
       <div class="control-group">
         <label class="control-label">{{i18n user.name.title}}</label>
         <div class="controls">
-          {{textField value=name classNames="input-xxlarge"}}
+          {{i18n user.name.title}}
         </div>
         <div class='instructions'>
           {{i18n user.name.instructions}}
