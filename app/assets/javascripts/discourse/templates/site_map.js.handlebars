@@ -13,6 +13,11 @@
     {{#if showMobileToggle}}
       <li>{{partial "siteMap/mobileToggleLink"}}</li>
     {{/if}}
+    {{#if currentUser}}
+      <li style="float:right;padding:0px;">
+        <button {{action "logout"}} class='btn btn-danger right'><i class='fa fa-sign-out'></i>{{i18n user.log_out}}</button>
+      </li>
+    {{/if}}
   </ul>
 
   {{#if categories}}

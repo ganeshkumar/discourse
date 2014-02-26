@@ -35,6 +35,20 @@ Discourse.SiteMapController = Ember.ArrayController.extend(Discourse.HasCurrentU
   actions: {
     toggleMobileView: function() {
       Discourse.Mobile.toggleMobileView();
+    },
+    /**
+     Logs out the currently logged in user
+
+     @method logout
+     @returns {Promise} resolved when the logout finishes
+     **/
+    logout: function() {
+      return Discourse.ajax("/session/" + Discourse.User.currentProp('username'), {
+        type: 'DELETE'
+      }).then(function () {
+          Discourse.KeyValueStore.abandonLocal();
+          window.location.href =  Discourse.sfp_url;
+        });
     }
   }
 });

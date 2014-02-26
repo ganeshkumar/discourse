@@ -399,20 +399,7 @@ Discourse.User.reopenClass(Discourse.Singleton, {
     return null;
   },
 
-  /**
-    Logs out the currently logged in user
 
-    @method logout
-    @returns {Promise} resolved when the logout finishes
-  **/
-  logout: function() {
-    var discourseUserClass = this;
-    return Discourse.ajax("/session/" + Discourse.User.currentProp('username'), {
-      type: 'DELETE'
-    }).then(function () {
-      discourseUserClass.currentUser = null;
-    });
-  },
 
   /**
     Checks if given username is valid for this email address

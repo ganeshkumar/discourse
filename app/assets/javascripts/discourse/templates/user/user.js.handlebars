@@ -87,9 +87,7 @@
             </button>
           {{/if}}
 
-          {{#if viewingSelf}}
-            <button {{action "logout"}} class='btn btn-danger right'><i class='fa fa-sign-out'></i>{{i18n user.log_out}}</button>
-          {{/if}}
+
 
           {{#if currentUser.staff}}
             <a {{bind-attr href="adminPath"}} class='btn right'><i class="fa fa-wrench"></i>{{i18n admin.user.show_admin_profile}}</a>
