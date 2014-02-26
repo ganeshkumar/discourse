@@ -73,12 +73,13 @@ window.Discourse = Ember.Application.createWithMixins(Discourse.Ajax, {
 
     @method logout
   **/
-  logout: function() {
-    Discourse.User.logout().then(function() {
-      // Reloading will refresh unbound properties
-      Discourse.KeyValueStore.abandonLocal();
-      window.location.pathname = Discourse.getURL('/');
-    });
+// Not required but still need to think.
+//  logout: function() {
+//    Discourse.User.logout().then(function() {
+//      // Reloading will refresh unbound properties
+//      Discourse.KeyValueStore.abandonLocal();
+//      window.location.pathname = Discourse.getURL('/');
+//    });
   },
 
   authenticationComplete: function(options) {
