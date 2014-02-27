@@ -73,14 +73,14 @@ window.Discourse = Ember.Application.createWithMixins(Discourse.Ajax, {
 
     @method logout
   **/
-// Not required but still need to think.
+//Not required but still need to think.
 //  logout: function() {
 //    Discourse.User.logout().then(function() {
 //      // Reloading will refresh unbound properties
 //      Discourse.KeyValueStore.abandonLocal();
 //      window.location.pathname = Discourse.getURL('/');
 //    });
-  },
+//  },
 
   authenticationComplete: function(options) {
     // TODO, how to dispatch this to the controller without the container?
