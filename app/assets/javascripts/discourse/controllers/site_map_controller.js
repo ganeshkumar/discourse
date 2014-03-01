@@ -18,7 +18,7 @@ Discourse.SiteMapController = Ember.ArrayController.extend(Discourse.HasCurrentU
   }.property(),
 
   mobileViewLinkTextKey: function() {
-    return Discourse.Mobile.mobileView ? "desktop_view" : "mobile_view";
+    return Discourse.Mobile.mobileView ? "sfp_specific.desktop_view" : "sfp_specific.mobile_view";
   }.property(),
 
   categories: function() {

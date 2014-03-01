@@ -90,22 +90,6 @@ de:
     last_post: "Letzter Beitrag"
     joined: "Beigetreten"
 
-    admin_title: "Forum Administration"
-    flags_title: "Markierte Beiträge"
-    show_more: "weitere anzeigen"
-    links: Links
-    faq: "FAQ"
-    project: "Projekt"
-    blog: "Teilnehmer Blog"
-    look_back: "Blick-zurück"
-    trophy: "Pokale"
-    donations: "Spenden und SFP-plus"
-    about: "Über SFP (Impressum)"
-    donation: "Donation and plus-Status"
-    mobile_view: "Mobilansicht"
-    desktop_view: "Desktopansicht"
-    privacy_policy: "Datenschutzrichtlinie"
-
     you: "Du"
     or: "oder"
     now: "gerade eben"
@@ -1151,6 +1135,24 @@ de:
       full: "Erstellen / Antworten / Anschauen"
       create_post: "Antworten / Anschauen"
       readonly: "Anschauen"
+
+    sfp_specific:
+      admin_title: "Forum Administration"
+      flags_title: "Markierte Beiträge"
+      show_more: "weitere anzeigen"
+      links: Links
+      faq: "FAQ"
+      project: "Projekt"
+      blog: "Teilnehmer Blog"
+      look_back: "Blick-zurück"
+      trophy: "Pokale"
+      donations: "Spenden und SFP-plus"
+      about: "Über SFP (Impressum)"
+      donation: "Donation and plus-Status"
+      mobile_view: "Mobilansicht"
+      desktop_view: "Desktopansicht"
+      privacy_policy: "Datenschutzrichtlinie"
+
 
   # This section is exported to the javascript for i18n in the admin section
   admin_js:

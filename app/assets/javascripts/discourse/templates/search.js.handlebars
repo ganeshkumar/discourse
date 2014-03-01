@@ -6,7 +6,7 @@
         <li class='heading'>
           {{resultType.name}}
           {{#if resultType.more}}
-            <a href='#' class='filter' {{action moreOfType resultType.type bubbles=false}}>{{i18n show_more}}</a>
+            <a href='#' class='filter' {{action moreOfType resultType.type bubbles=false}}>{{i18n sfp_specific.show_more}}</a>
           {{else}}
             {{#if showCancelFilter}}
               <a href='#' class='filter' {{action cancelType bubbles=false}}><i class='fa fa-times-circle'></i></a>
